@@ -15,7 +15,7 @@ export class DetailsService {
    
   }
   changeMessage(message:any){
-    this.messageSource.next(message);
+    this.messageSource.next(mes00sage);
   }
   getrid(){
     return this.rid;
