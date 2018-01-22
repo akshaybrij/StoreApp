@@ -1,0 +1,66 @@
+<!--<div class="form-group">
+  <div class="container mx-auto">
+
+    <form  (submit)="OnSubmit()" >
+        <h1 class="text-center">Login</h1><br>
+      <label><b>Email:</b></label><br>
+      <input type="text" class="form-control col-sm-4 MX-AUTO" [(ngModel)]="username" name="username"  placeholder="Username">
+      <label><b>Password:</b></label><br>
+      <input type="password"  class="form-control col-sm-4"  [(ngModel)]="password" name="password"  placeholder="Pasword">
+      <button   class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+</div>-->
+<html>
+<head>
+<title>DSOI Jabalpur</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!-- bootstrap-css -->
+ 
+<!-- //bootstrap-css -->
+<!-- Custom CSS --> 
+<!-- font CSS -->
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- font-awesome icons --> 
+ 
+<!-- //font-awesome icons -->
+</head>
+<body>
+		<div class="agile-signup">	
+			
+			<div class="content2">
+				<div class="grids-heading gallery-heading signup-heading">
+					<h2>Login</h2>
+        </div>
+   
+				<form action="" (submit)="OnSubmit()" method="post">
+          <div class="form-group"></div>
+					<input type="text" name="Username" value="Username" class="" onFocus="this.value = '';" [(ngModel)]="username" name="username" onBlur="if (this.value == '') {this.value = 'Username';}">
+					<input type="password" name="Password" value="Password" onFocus="this.value = '';"  [(ngModel)]="password" name="password" onBlur="if (this.value == '') {this.value = 'Password';}">
+					<input type="submit" class="register" value="Login">
+        </form>
+      
+				<div class="signin-text">
+					<div class="text-left">
+						<p><a href="#"> Forgot Password? </a></p>
+					</div>
+					<div class="text-right">
+						<p><a href="signup.html"> Create New Account</a></p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+
+			</div>
+			
+			<!-- footer -->
+			<div class="copyright">
+				<p>© 2018 DSOIJabalpur. All Rights Reserved.</p>
+			</div>
+			<!-- //footer -->
+			
+		</div>
+</body>
+</html>
