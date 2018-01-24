@@ -2,12 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {DetailsService} from '../../service/details.service';
 import {Data} from '../../models/Data'; 
 import {Router} from '@angular/router';
-import "../../../../../psoi-22Jan/js/proton.js" ;
- 
- 
-import '../../../../../psoi-22Jan/js/screenfull.js';
- 
-import '../../../../../psoi-22Jan/js/skycons.js';
 import '../../../../../psoi-22Jan/js/proton.js';
 import {alerts} from '../../../assets/js/index.js';
 @Component({
@@ -48,6 +42,7 @@ export class MidwareComponent implements OnInit {
   //this.messageEvent.emit("s");
  
   this.detailservice.changeMessage(this.rid);
+
 //
   }
 }
