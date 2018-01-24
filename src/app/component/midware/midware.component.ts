@@ -12,7 +12,7 @@ import {alerts} from '../../../assets/js/index.js';
 export class MidwareComponent implements OnInit {
  rid:string;
  data:Data[];
-
+ styleData:any;
  message:string;
   constructor(private detailservice:DetailsService,private router:Router) {
     alerts();
@@ -42,7 +42,10 @@ export class MidwareComponent implements OnInit {
   //this.messageEvent.emit("s");
  
   this.detailservice.changeMessage(this.rid);
-
-//
+  }
+  Logmeout(){
+    localStorage.clear();
+    this.router.navigate(['/']);
   }
 }
+

@@ -15,7 +15,7 @@ $(document).ready(function() {
   
   });
   function alerts(){
-    alert(0);
+    
   }
   exports.alerts=alerts
    

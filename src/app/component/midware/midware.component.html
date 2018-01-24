@@ -1,71 +1,49 @@
 <div class="xss">
- 
+ <style>
+  .main-grid{
+	  background: #e6e6e6;
+  }	
+  .logout{
+	  position: absolute;
+	  margin-left: 70em;
+  }
+  .logout:hover{
+	  background: #fff;
+  }
+  .sub{
+	  margin-left:150px;
+  }
+  .weltext{
+	  margin-top: 10%;
+  }
+</style>
 <div class="dashboard-page">
-	<nav class="main-menu">
-		<ul>
-			<li>
-				<a href="index.html">
-					<i class="fa fa-home nav_icon"></i>
-					<span class="nav-text">Home</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class="fa fa-bar-chart nav_icon"></i>
-					<span class="nav-text">Membership</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class="icon-font nav-icon"></i>
-					<span class="nav-text">Shopping</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class="fa fa-map-marker" aria-hidden="true"></i>
-					<span class="nav-text">View Members</span>
-				</a>
-			</li>
-			<li>
-                <a href="#">
-                <i class="icon-off nav-icon"></i>
-                <span class="nav-text">Logout</span>
-                </a>
-			</li>
-		</ul>
-	</nav>
 	<section class="wrapper scrollable">
-		<nav class="user-menu">
-			<a href="javascript:;" class="main-menu-access">
-			<i class="icon-proton-logo"></i>
-			<i class="icon-reorder"></i>
-			</a>
-		</nav>
+ 
 		<section class="title-bar">
 			<div class="logo">
-				<h1><a href="#"><img src="#" alt="" />DSOI JABALPUR</a></h1>
+				<h1><a href="#"><img src="../../../assets/img/logo.jpg" alt="" />DSOI JABALPUR</a></h1>
 			</div>
 			<div class="full-screen">
 			 
 			</div>
-			<div class="w3l_search">
+			<div class="w3l_search" >
 				<form action="#" method="post" (submit)="onSubmit()">
 					<input type="text" name="search" value="Search" onFocus="this.value = '';" placeholder="Enter RFID..." [(ngModel)]="rid" name="rid" onBlur="if (this.value == '') {this.value = 'Search';}" required="">
 					<button class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
 				</form>
 			</div>
-	
+	<div class="logout"><a href="#"><button class="btn btn-primary" (click)="Logmeout()">LogOut</button></a></div>
 			<div class="clearfix"> </div>
 		</section>
-		<div class="main-grid" style="">
+		<div class="main-grid" *ngIf="data ;else Welcome">
 			<div class="agile-bottom-grids">
 				<div class="col-md-8 agile-bottom-right">
 					<div class="agile-bottom-grid">
 						<div class="area-grids-heading">
 							<h3>Member Details</h3>
 						</div>
-						<div class="col-md-3 member_pic"><img src=" " alt=""></div>
+						<div class="col-md-3 member_pic"><img src="../../../assets/img/member.jpg" alt=""></div>
                         <div class="col-md-9 member_details">
                         	<label>Member Name:</label>
                         	<p>{{data.member_fname}}</p>
@@ -117,11 +95,12 @@
 											</tr>
 											<tr>
 												<td>Cradit Balance</td>
-												<td>INR 72,000</td>
+												<td><input type="text" class="form-control"></td>
 											</tr>
-											
 										</tbody>
+									
 									</table>
+									<button class="btn sub btn-primary">Submit</button>
 						</div>
 					
 					</div>
@@ -131,6 +110,11 @@
 			
 			
 		</div>
+		<ng-template #Welcome>
+				<div class="welcome text-center" >
+						<h1 class="weltext">Welcome</h1>
+					</div>
+		</ng-template>
 		<!-- footer -->
 		<div class="footer">
 			<p>© 2018 DSOIJabalpur. All Rights Reserved.</p>

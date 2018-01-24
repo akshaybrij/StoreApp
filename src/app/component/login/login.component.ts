@@ -14,10 +14,16 @@ export class LoginComponent implements OnInit {
 username:string;
 password:string;
 tokens:any;
-  constructor(public http:HttpClient,private authservice:AuthService,
-  private router:Router,private toastr: ToastrService) { }
+constructor(public http:HttpClient,private authservice:AuthService,
+private router:Router,private toastr: ToastrService) { }
 
   ngOnInit() {
+  if(localStorage.getItem('tokens') !== null){
+    this.router.navigate(['/user']);
+  }
+  else{
+    this.router.navigate(['/']);
+  }
     
   }
   OnSubmit(){
@@ -27,14 +33,12 @@ tokens:any;
    if(response == "Invalid user"){
        this.toastr.error('Wrong Username or Password', '', {
         timeOut: 3000,
-      });
-      
+      }); 
      }
      else{
        console.log(response);
        this.tokens=JSON.stringify(response);
        localStorage.setItem('tokens',this.tokens);
-   //    alert(localStorage.getItem('tokens'));
       this.router.navigate(['/user']);
      }
    })
