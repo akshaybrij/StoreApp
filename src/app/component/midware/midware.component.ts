@@ -3,7 +3,6 @@ import {DetailsService} from '../../service/details.service';
 import {Data} from '../../models/Data'; 
 import {Router} from '@angular/router';
 import '../../../../../psoi-22Jan/js/proton.js';
-import {alerts} from '../../../assets/js/index.js';
 @Component({
   selector: 'app-midware',
   templateUrl: './midware.component.html',
@@ -15,7 +14,7 @@ export class MidwareComponent implements OnInit {
  styleData:any;
  message:string;
   constructor(private detailservice:DetailsService,private router:Router) {
-    alerts();
+ 
    }
 
   ngOnInit() {
@@ -23,7 +22,8 @@ export class MidwareComponent implements OnInit {
       this.message=message;
       console.log(this.message);
     })
-    if(localStorage==null){
+    if(!localStorage.getItem('tokens')){
+     
       this.router.navigate(['/']);
     }
   }
@@ -33,6 +33,7 @@ export class MidwareComponent implements OnInit {
    // alert(response);
    if(response==null){
      alert("No User with this data");
+     //document.getElementsByClassName('main-grid')[0].className="hidden";
    }
    else{
     this.data=response
