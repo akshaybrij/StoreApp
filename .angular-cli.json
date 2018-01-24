@@ -24,10 +24,7 @@
          
         "../node_modules/ngx-toastr/toastr.css"
       ],
-      "scripts": [
-         "src/assets/js/index.js"
-        
-        
+      "scripts": [ 
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

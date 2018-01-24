@@ -9,8 +9,7 @@ import '../../../../../psoi-22Jan/js/screenfull.js';
  
 import '../../../../../psoi-22Jan/js/skycons.js';
 import '../../../../../psoi-22Jan/js/proton.js';
-import * as scr from '../../../assets/js/index.js'
-
+import {alerts} from '../../../assets/js/index.js';
 @Component({
   selector: 'app-midware',
   templateUrl: './midware.component.html',
@@ -19,8 +18,11 @@ import * as scr from '../../../assets/js/index.js'
 export class MidwareComponent implements OnInit {
  rid:string;
  data:Data[];
+
  message:string;
-  constructor(private detailservice:DetailsService,private router:Router) { }
+  constructor(private detailservice:DetailsService,private router:Router) {
+    alerts();
+   }
 
   ngOnInit() {
     this.detailservice.currentMessage.subscribe(message=>{

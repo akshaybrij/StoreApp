@@ -12,5 +12,10 @@ $(document).ready(function() {
   
       e.preventDefault();
     });
-    alert(0);
+  
   });
+  function alerts(){
+    alert(0);
+  }
+  exports.alerts=alerts
+   
