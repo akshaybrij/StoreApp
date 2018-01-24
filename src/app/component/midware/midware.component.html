@@ -11,7 +11,7 @@
 			</div>
 			<div class="w3l_search" >
 				<form action="#" method="post" id="Integerform" (submit)="onSubmit()">
-					<input type="text" name="search" value="Search" onFocus="this.value = '';" placeholder="Enter RFID..." [(ngModel)]="rid" name="rid" onBlur="if (this.value == '') {this.value = 'Search';}" required="">
+					<input type="text" placeholder="Enter RFID..." [(ngModel)]="rid" name="rid" required/>
 					<button class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
 				</form>
 			</div>
@@ -61,7 +61,7 @@
 					<div class="agile-bottom-grid">
 						<div class="area-grids-heading">
 							<h3>Account Details</h3>
-							<form (submit)="Increment()">
+							<form (submit)="Increment()" id="IncrementForm"> 
                             <table class="table table-bordered">
 										<tbody>
 											<tr>

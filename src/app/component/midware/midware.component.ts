@@ -63,9 +63,12 @@ export class MidwareComponent implements OnInit {
   Increment(){
   this.http.get("http://localhost/dsoi_new/api/mem_bal?rid="+this.rid+"&bal="+this.balance).subscribe(respond=>{
     this.toastrService.success('Success', '', {
-      timeOut: 3000,
+      timeOut: 3000
     }
   });
+var resetForm = <HTMLFormElement>document.getElementById('IncrementForm');
+resetForm.reset();
+  //document.getElementById('IncrementForm').reset();
   }
 }
 
