@@ -4694,3 +4694,24 @@ margin-bottom: 20px;
 	}
 }
 /*-- //responsive --*/
+/*Custom-CSS*/
+.main-grid{
+    background: #e6e6e6;
+}	
+.logout{
+    position: absolute;
+    margin-left: 70em;
+}
+.logout:hover{
+    background: #fff;
+}
+.sub{
+    margin-left:150px;
+}
+.weltext{
+    margin-top: 10%;
+}
+.error-message{
+    width:70%;
+    margin-left:13em;
+}

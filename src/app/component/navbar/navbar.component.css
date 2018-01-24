@@ -1,3 +1,4 @@
+@import '../midware/midware.component.css';
 #mainNav {
     background-color: #212529; }
     #mainNav .navbar-toggler {

@@ -1,22 +1,4 @@
 <div class="xss">
- <style>
-  .main-grid{
-	  background: #e6e6e6;
-  }	
-  .logout{
-	  position: absolute;
-	  margin-left: 70em;
-  }
-  .logout:hover{
-	  background: #fff;
-  }
-  .sub{
-	  margin-left:150px;
-  }
-  .weltext{
-	  margin-top: 10%;
-  }
-</style>
 <div class="dashboard-page">
 	<section class="wrapper scrollable">
  
@@ -28,7 +10,7 @@
 			 
 			</div>
 			<div class="w3l_search" >
-				<form action="#" method="post" (submit)="onSubmit()">
+				<form action="#" method="post" id="Integerform" (submit)="onSubmit()">
 					<input type="text" name="search" value="Search" onFocus="this.value = '';" placeholder="Enter RFID..." [(ngModel)]="rid" name="rid" onBlur="if (this.value == '') {this.value = 'Search';}" required="">
 					<button class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
 				</form>
@@ -79,6 +61,7 @@
 					<div class="agile-bottom-grid">
 						<div class="area-grids-heading">
 							<h3>Account Details</h3>
+							<form (submit)="Increment()">
                             <table class="table table-bordered">
 										<tbody>
 											<tr>
@@ -94,13 +77,14 @@
 												<td>INR 5,000</td>
 											</tr>
 											<tr>
-												<td>Cradit Balance</td>
-												<td><input type="text" class="form-control"></td>
+												<td>Credit Balance</td>
+												<td><input type="text" class="form-control" id="bal" [(ngModel)]="balance" name="balance" placeholder="Enter Amount" value=""></td>
 											</tr>
 										</tbody>
 									
 									</table>
 									<button class="btn sub btn-primary">Submit</button>
+								</form>
 						</div>
 					
 					</div>
@@ -115,13 +99,16 @@
 						<h1 class="weltext">Welcome</h1>
 					</div>
 		</ng-template>
+		
 		<!-- footer -->
 		<div class="footer">
 			<p>© 2018 DSOIJabalpur. All Rights Reserved.</p>
+			<div class="error-message"></div>
 		</div>
+	
 		<!-- //footer -->
 	</section>
 
 </div>
-
+ 
 </div>
