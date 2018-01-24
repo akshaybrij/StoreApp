@@ -2,6 +2,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {DetailsService} from '../../service/details.service';
 import {Data} from '../../models/Data'; 
 import {Router} from '@angular/router';
+import "../../../../../psoi-22Jan/js/proton.js" ;
+ 
+ 
+import '../../../../../psoi-22Jan/js/screenfull.js';
+ 
+import '../../../../../psoi-22Jan/js/skycons.js';
+import '../../../../../psoi-22Jan/js/proton.js';
+import * as scr from '../../../assets/js/index.js'
+
 @Component({
   selector: 'app-midware',
   templateUrl: './midware.component.html',
