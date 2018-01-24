@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class MidwareComponent implements OnInit {
  rid:number;
+ total:number;
  data:Data[];
  styleData:any;
  balance:number; 
@@ -50,6 +51,7 @@ export class MidwareComponent implements OnInit {
    else{
     this.data=response
     console.log(this.data);
+    this.total=this.data.member_balance;
    }
   })
   //this.messageEvent.emit("s");
@@ -66,8 +68,10 @@ export class MidwareComponent implements OnInit {
       timeOut: 3000
     }
   });
+this.total=parseInt(this.total)+parseInt(this.balance)
 var resetForm = <HTMLFormElement>document.getElementById('IncrementForm');
 resetForm.reset();
+
   //document.getElementById('IncrementForm').reset();
   }
 }
