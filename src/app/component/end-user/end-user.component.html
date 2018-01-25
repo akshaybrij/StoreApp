@@ -1,0 +1,337 @@
+ 
+<head>
+<title>DSOI Jabalpur</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+ 
+<!-- //bootstrap-css -->
+<!-- Custom CSS -->
+ 
+<script>
+		$(function () {
+			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+			if (!screenfull.enabled) {
+				return false;
+			}
+			$('#toggle').click(function () {
+				screenfull.toggle($('#container')[0]);
+			});	
+		});
+</script>
+
+<!--skycons-icons--> 
+<!--//skycons-icons-->
+ 
+
+</head>
+<body class="dashboard-page">
+	<nav class="main-menu">
+		<ul>
+			<li>
+				<a href="index.html">
+					<i class="fa fa-home nav_icon"></i>
+					<span class="nav-text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-bar-chart nav_icon"></i>
+					<span class="nav-text">Membership</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="icon-font nav-icon"></i>
+					<span class="nav-text">Shopping</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-map-marker" aria-hidden="true"></i>
+					<span class="nav-text">View Members</span>
+				</a>
+			</li>
+			<li>
+                <a href="#">
+                <i class="icon-off nav-icon"></i>
+                <span class="nav-text">Logout</span>
+                </a>
+			</li>
+		</ul>
+	</nav>
+	<section class="wrapper scrollable">
+		<nav class="user-menu">
+			<a href="javascript:;" class="main-menu-access">
+			<i class="icon-proton-logo"></i>
+			<i class="icon-reorder"></i>
+			</a>
+		</nav>
+		<section class="title-bar">
+			<div class="logo">
+				<h1><a href="index.html"><img src="images/logo.jpg" alt="" />DSOI JABALPUR</a></h1>
+			</div>
+			<div class="full-screen">
+				<section class="full-top">
+					<button id="toggle"><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>	
+				</section>
+			</div>
+			<div class="w3l_search">
+				<form action="#" method="post">
+					<input type="text" name="search" value="Search" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search';}" required="">
+					<button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+				</form>
+			</div>
+			<div class="header-right">
+				<div class="profile_details_left">
+					<div class="header-right-left">
+						<!--notifications of menu start -->
+						<ul class="nofitications-dropdown">
+							Welcome Jitendra
+							<div class="clearfix"> </div>
+						</ul>
+					</div>	
+					<div class="profile_details">		
+						<ul>
+							<li class="dropdown profile_details_drop">
+								<a href="#">
+									<div class="profile_img">	
+										<span class="prfil-img"><img src="images/2.png" alt="" /></span> 
+										<div class="clearfix"></div>	
+									</div>	
+								</a>
+								
+							</li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</section>
+		<div class="main-grid">
+			<div class="agile-bottom-grids">
+				<div class="col-md-8 agile-bottom-right">
+					<div class="agile-bottom-grid">
+						<div class="area-grids-heading">
+							<h3>Member Details</h3>
+						</div>
+						<div class="col-md-3 member_pic"><img src="images/member.jpg" alt=""></div>
+                        <div class="col-md-9 member_details">
+                        	<label>Member Name:</label>
+                        	<p>Jitendra Notnani</p>
+                            <div class="clearfix"> </div>
+                            <label>DSOI Number:</label>
+                        	<p>D458963d55</p>
+                            <div class="clearfix"> </div>
+                            <label>DSOI Rank:</label>
+                        	<p>5<sup>th</sup> in club</p>
+                            <div class="clearfix"> </div>
+                            <label>Date of Issue:</label>
+                        	<p>05 December 2016</p>
+                            <div class="clearfix"> </div>
+                            <label>Membership Fee:</label>
+                        	<p>INR 50,000</p>
+                            <div class="clearfix"> </div>
+                            <label>Membership Type:</label>
+                        	<p>Single/Family</p>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <div class="col-md-12 btn_botsp20">
+                       	 		<h2>
+									<a href="#"><span class="label label-primary">Transaction History</span></a>
+									<a href="#"><span class="label label-success">View Members</span></a>
+                                    <a href="#"><span class="label label-warning">Pending Orders</span></a>
+								</h2>
+                        </div>        
+                        <div class="clearfix"> </div>
+					</div>
+				</div>
+                
+				<div class="col-md-4 agile-bottom-left">
+					<div class="agile-bottom-grid">
+						<div class="area-grids-heading">
+							<h3>Products</h3>
+                            
+                            <div class="forms">
+								<h3 class="title1"></h3>
+								<div class="widget-shadow">
+									<form class="form-horizontal" action="#" method="post">
+                                    	<div class="form-group">
+											<label for="selector1" class="col-sm-5 control-label">Category:</label>
+											<div class="col-sm-7"><select name="selector1" id="selector1" class="form-control1">
+												<option>-- Category --</option>
+												<option>Cat1</option>
+												<option>Cat1</option>
+												<option>Cat1</option>
+											</select></div>
+										</div>
+                                        
+                                        <div class="form-group">
+											<label for="selector1" class="col-sm-5 control-label">Sub Category:</label>
+											<div class="col-sm-7"><select name="selector1" id="selector1" class="form-control1">
+												<option>-- Sub Category --</option>
+												<option>Sub Cat1</option>
+												<option>Sub Cat1</option>
+												<option>Sub Cat1</option>
+											</select></div>
+										</div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>   
+                            <div class="gallery-grids">
+						<div class="show-reel">
+							<div class="col-md-6 agile-gallery-grid">
+								<div class="agile-gallery">
+									<a href="images/g1.jpg" class="lsb-preview" data-lsb-group="header">
+										<img src="images/g1.jpg" alt="" />
+									</a>
+								</div>
+                                <div class="agileits-name"><h4>Consectetur</h4></div>
+							</div>
+							<div class="col-md-6 agile-gallery-grid">
+								<div class="agile-gallery">
+									<a href="images/g2.jpg" class="lsb-preview" data-lsb-group="header">
+										<img src="images/g2.jpg" alt="" />
+									</a>
+								</div>
+                                <div class="agileits-name"><h4>Consectetur</h4></div>
+							</div>
+							<div class="col-md-6 agile-gallery-grid">
+								<div class="agile-gallery">
+									<a href="images/g3.jpg" class="lsb-preview" data-lsb-group="header">
+										<img src="images/g3.jpg" alt="" />
+									</a>
+								</div>
+                                <div class="agileits-name"><h4>Consectetur</h4></div>
+							</div>
+							<div class="col-md-6 agile-gallery-grid">
+								<div class="agile-gallery">
+									<a href="images/g4.jpg" class="lsb-preview" data-lsb-group="header">
+										<img src="images/g4.jpg" alt="" />
+									</a>
+								</div>
+                                <div class="agileits-name"><h4>Consectetur</h4></div>
+							</div>
+                            <div class="col-md-6 agile-gallery-grid">
+								<div class="agile-gallery">
+									<a href="images/g1.jpg" class="lsb-preview" data-lsb-group="header">
+										<img src="images/g1.jpg" alt="" />
+									</a>
+								</div>
+                                <div class="agileits-name"><h4>Consectetur</h4></div>
+							</div>
+							<div class="col-md-6 agile-gallery-grid">
+								<div class="agile-gallery">
+									<a href="images/g2.jpg" class="lsb-preview" data-lsb-group="header">
+										<img src="images/g2.jpg" alt="" />
+									</a>
+								</div>
+                                <div class="agileits-name"><h4>Consectetur</h4></div>
+							</div>
+							<div class="col-md-6 agile-gallery-grid">
+								<div class="agile-gallery">
+									<a href="images/g3.jpg" class="lsb-preview" data-lsb-group="header">
+										<img src="images/g3.jpg" alt="" />
+									</a>
+								</div>
+                                <div class="agileits-name"><h4>Consectetur</h4></div>
+							</div>
+							<div class="col-md-6 agile-gallery-grid">
+								<div class="agile-gallery">
+									<a href="images/g4.jpg" class="lsb-preview" data-lsb-group="header">
+										<img src="images/g4.jpg" alt="" />
+									</a>
+								</div>
+                                <div class="agileits-name"><h4>Consectetur</h4></div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						
+						
+						
+						
+						<script>
+							$(window).load(function() {
+							  $.fn.lightspeedBox();
+							});
+
+						</script>
+				</div>
+                                    
+                            
+						</div>
+					
+					</div>
+				</div>
+                
+                <div class="col-md-8 agile-bottom-right">
+					<div class="agile-bottom-grid">
+						<div class="area-grids-heading">
+							<h3>Cart Table</h3>
+						</div>
+						 <table id="table-breakpoint">
+					<thead>
+					  <tr>
+						<th>#</th>
+						<th>Image</th>
+						<th>Name</th>
+						<th>Price</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td>01</td>
+						<td><img src="images/member.jpg" alt="" width="50"></td>
+						<td>Product name</td>
+						<td>INR 5000</td>
+					  </tr>
+                      <tr>
+						<td>01</td>
+						<td><img src="images/member.jpg" alt="" width="50"></td>
+						<td>Product name</td>
+						<td>INR 5000</td>
+					  </tr>
+                      <tr>
+						<td>01</td>
+						<td><img src="images/member.jpg" alt="" width="50"></td>
+						<td>Product name</td>
+						<td>INR 5000</td>
+					  </tr>
+                      <tr>
+						<td>01</td>
+						<td><img src="images/member.jpg" alt="" width="50"></td>
+						<td>Product name</td>
+						<td>INR 5000</td>
+					  </tr>
+                      <tr>
+						<td>01</td>
+						<td><img src="images/member.jpg" alt="" width="50"></td>
+						<td>Product name</td>
+						<td>INR 5000</td>
+					  </tr>
+					</tbody>
+				  </table>
+                        <div class="clearfix"> </div>
+					</div>
+				</div>
+                
+				<div class="clearfix"> </div>
+
+			</div>
+			
+			
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<p>© 2018 DSOIJabalpur. All Rights Reserved.</p>
+		</div>
+		<!-- //footer -->
+	</section>
+    <!-- gallery -->
+ 
+</body>
+ 

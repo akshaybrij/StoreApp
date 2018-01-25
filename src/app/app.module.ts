@@ -16,10 +16,11 @@ import {ToastModule} from  'ng2-toastr/ng2-toastr';
 import { ToastrModule } from 'ngx-toastr';
 import { FilternullPipe } from './filternull.pipe';
 import { AuthService } from './service/auth.service';
+import { EndUserComponent } from './component/end-user/end-user.component';
 const route:Routes=[
   {path:'',component:LoginComponent},
   {path:'user',component:DashboardComponent},
- 
+  {path:'enduser',component:EndUserComponent},
 ]
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ const route:Routes=[
     NavbarComponent,
     SidebarComponent,
     MidwareComponent,
-    FilternullPipe
+    FilternullPipe,
+    EndUserComponent
   ],
   imports: [
     BrowserModule,

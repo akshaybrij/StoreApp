@@ -2,7 +2,22 @@
 <div class="dashboard-page">
 	<section class="wrapper scrollable">
  
-    <app-navbar></app-navbar>
+		<section class="title-bar">
+			<div class="logo">
+				<h1><a href="#"><img src="../../../assets/img/logo.jpg" alt="" />DSOI JABALPUR</a></h1>
+			</div>
+			<div class="full-screen">
+			 
+			</div>
+			<div class="w3l_search" >
+				<form action="#" method="post" id="Integerform" (submit)="onSubmit()">
+					<input type="text" placeholder="Enter RFID..." [(ngModel)]="rid" name="rid" required/>
+					<button class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+				</form>
+			</div>
+	<div class="logout"><a href="#"><button class="btn btn-primary" (click)="Logmeout()">LogOut</button></a></div>
+			<div class="clearfix"> </div>
+		</section>
 		<div class="main-grid" *ngIf="data ;else Welcome">
 			<div class="agile-bottom-grids">
 				<div class="col-md-8 agile-bottom-right">
@@ -79,28 +94,8 @@
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-			<div class="container">
-			<div class="col-md-8 agile-bottom-right">
-				<div class="agile-bottom-grid">
-					<div class="member_box">
-						<div class="col-md-2 member_pic"><img src="images/member.jpg" alt="" width="70" /></div>
-						<div class="col-md-10 member_details">
-						<label>Member Name:</label>
-						<p>Jitendra Notnani</p>
-						<div class="clearfix"> </div>
-						<label>DSOI Number:</label>
-						<p>D458963d55</p>
-						<div class="clearfix"> </div>
-						<label>DSOI Rank:</label>
-						<p>5<sup>th</sup> in club</p>
-					</div>
-					</div>					 
-					<div class="clearfix"> </div>
-				   
-				</div>
-			</div>
 			
-		</div>
+			
 		</div>
 		<ng-template #Welcome>
 				<div class="welcome text-center" >

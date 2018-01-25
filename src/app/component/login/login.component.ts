@@ -39,7 +39,12 @@ private router:Router,private toastr: ToastrService) { }
        console.log(response);
        this.tokens=JSON.stringify(response);
        localStorage.setItem('tokens',this.tokens);
+       if(this.tokens.posu_type==1){
       this.router.navigate(['/user']);
+       }
+       else{
+        this.router.navigate(['/enduser']);
+       }
      }
    })
  
