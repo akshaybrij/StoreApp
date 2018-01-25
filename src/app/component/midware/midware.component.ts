@@ -12,10 +12,10 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class MidwareComponent implements OnInit {
  rid:number;
- total:number;
+ total:any;
  data:Data[];
  styleData:any;
- balance:number; 
+ balance:any; 
  message:string;
   constructor(private detailservice:DetailsService,private router:Router,private toastrService:ToastrService,
   private http:HttpClient) {
@@ -33,35 +33,6 @@ export class MidwareComponent implements OnInit {
     }
   }
   @Output() messageEvent = new EventEmitter<string>();
-  onSubmit(){
-    //console.log(parseInt(this.rid);
-  this.detailservice.getJson(this.rid).subscribe(response => {
-   // alert(response);
-   if(response==null){
-    document.getElementsByClassName('error-message')[0].innerHTML=`<div class="alert alert-danger">
-    <strong>Wrong!</strong> No User Found with this RFID.
-  </div>
-  `
-  // document.getElementsByClassName('main-grid')[0].className="hidden";
-   setTimeout(function(){
-    window.location.reload()
-   },3000);
-
-   }
-   else{
-    this.data=response
-    console.log(this.data);
-    this.total=this.data.member_balance;
-   }
-  })
-  //this.messageEvent.emit("s");
- 
-  this.detailservice.changeMessage(this.rid);
-  }
-  Logmeout(){
-    localStorage.clear();
-    this.router.navigate(['/']);
-  }
   Increment(){
   this.http.get("http://localhost/dsoi_new/api/mem_bal?rid="+this.rid+"&bal="+this.balance).subscribe(respond=>{
     this.toastrService.success('Success', '', {

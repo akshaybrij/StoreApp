@@ -8,7 +8,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { MidwareComponent } from './component/midware/midware.component';
-import { FooterComponent } from './component/footer/footer.component';
+ 
 import { DetailsService } from './service/details.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,7 +19,7 @@ import { AuthService } from './service/auth.service';
 const route:Routes=[
   {path:'',component:LoginComponent},
   {path:'user',component:DashboardComponent},
-  {path:'foot',component:FooterComponent}
+ 
 ]
 @NgModule({
   declarations: [
@@ -29,7 +29,6 @@ const route:Routes=[
     NavbarComponent,
     SidebarComponent,
     MidwareComponent,
-    FooterComponent,
     FilternullPipe
   ],
   imports: [

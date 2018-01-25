@@ -1,13 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink bg-primary" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="/">Dashboard</a>
-      <a class="navbar-brand js-scroll-trigger" href="/" (click)="LogMeout()">Logout</a>
-      <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-     
-      </div>
-    </div>
-  </nav>
+<br>
+<section class="title-bar">
+  <div class="logo">
+    <h1><a href="#"><img src="../../../assets/img/logo.jpg" alt="" />DSOI JABALPUR</a></h1>
+  </div>
+  <div class="full-screen">
+   
+  </div>
+  <div class="w3l_search" >
+    <form action="#" method="post" id="Integerform" (submit)="onSubmit()">
+      <input type="text" placeholder="Enter RFID..." [(ngModel)]="rid" name="rid" required/>
+      <button class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </form>
+  </div>
+<div class="logout"><a href="#"><button class="btn btn-primary" (click)="Logmeout()">LogOut</button></a></div>
+  <div class="clearfix"> </div>
+</section>
