@@ -14,12 +14,19 @@ export class LoginComponent implements OnInit {
 username:string;
 password:string;
 tokens:any;
+x:Object;
 constructor(public http:HttpClient,private authservice:AuthService,
 private router:Router,private toastr: ToastrService) { }
 
   ngOnInit() {
   if(localStorage.getItem('tokens') !== null){
+    this.x=JSON.parse(localStorage.getItem('tokens'));
+    if(this.x.posu_type==1){
     this.router.navigate(['/user']);
+    }
+    else{
+      this.router.navigate(['/enduser']);
+    }
   }
   else{
     this.router.navigate(['/']);
